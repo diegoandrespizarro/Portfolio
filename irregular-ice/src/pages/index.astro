@@ -2,55 +2,56 @@
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 // Update the import statement to point to the correct file path
-import LinkedInIcon from "../components/icons/LinkedIn.astro";
-import SocialPill from "../components/SocialPill.astro";
-import GitHubIcon from "../components/icons/GitHub.astro";
-import MailIcon from "../components/icons/Mail.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Experience from "../components/Experience.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout
 	title="Porfolio de Diego Pizarro - Desarrollador y Programador Web con 3 años de experiencia"
 	description="Contrata a Diego Pizarro para crear tu aplicación web o móvil. Desarrollador Web."
 >
-	<main>
-		<SectionContainer class="py-44 pb-24">
-			<img class="rounded-full size-12 mb-4" src="https://media.licdn.com/dms/image/D4D03AQEkTIho74d7xQ/profile-displayphoto-shrink_200_200/0/1704640667803?e=2147483647&v=beta&t=42V7ninIGQV24YMwuyqorrD2NPR-VrIkOVqx38q3uSM" alt="">
-			<h1 class="text-5xl font-bold flex flex-row gap-x-4 pb-10">
-				Hola, Soy Diego <a
-					href="https://www.linkedin.com/in/diegoandrespizarro/"
-					target="_blank"
-					rel="noopener"
-					class="flex justify-center items-center"
-					><Badge>Disponible para trabajar</Badge></a>
-			</h1>
-			<h2 class="text-2xl text-wrap">
-				<span>+3 años de experiencia.</span><span class="text-yellow-200/90">Desarrollador web</span>. <span class="text-red-200/90"> De Buenos Aires,
-				Argentina</span>
-			</h2>
-			<nav class="flex gap-x-4 mt-8">
-					<SocialPill href="https://www.linkedin.com/in/diegoandrespizarro/">
-						<LinkedInIcon class="size-6"/>
-						LinkedIn
-					</SocialPill>
-					<SocialPill href="https://github.com/diegoandrespizarro">
-						<GitHubIcon class="size-6"/>
-						GitHub
-					</SocialPill>
-					<SocialPill href="diego.pizarro1986@gmail.com">
-						<MailIcon class="size-6"/>
-						diego.pizarro1986@gmail.com
-					</SocialPill>
-			</nav>
-		</SectionContainer>
-		<SectionContainer id="experiencia">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-				<Briefcase class="size-7"/>
-				Experiencia laboral
-			</h2>
-			<Experience/>
-		</SectionContainer>
-	</main>
+<main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <Briefcase class="size-8" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+  </main>
 </Layout>

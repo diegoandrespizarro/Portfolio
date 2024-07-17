@@ -1,0 +1,38 @@
+
+---
+
+import Badge from './Badge.astro'
+import SocialPill from './SocialPill.astro'
+import MailIcon from './icons/Mail.astro'
+import LinkedInIcon from './icons/LinkedIn.astro'
+---
+
+<div class="max-w-xl">
+    <div class="flex gap-4 mb-4">
+        <img class="rounded-full shadow-lg size-16" src="https://media.licdn.com/dms/image/D4D03AQEkTIho74d7xQ/profile-displayphoto-shrink_200_200/0/1704640667803?e=2147483647&v=beta&t=42V7ninIGQV24YMwuyqorrD2NPR-VrIkOVqx38q3uSM" alt="">
+        <a
+                href="https://www.linkedin.com/in/diegoandrespizarro/"
+                target="_blank"
+                rel="noopener"
+                class="flex justify-center items-center"
+                ><Badge>Disponible para trabajar</Badge>
+            </a>
+    </div>
+        <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
+            Hola, Soy Diego 
+        </h1>
+        <p class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+            +3 años de experiencia.<strong>Desarrollador web</strong>.De Buenos Aires,
+            Argentina</span>
+            </p>
+        <nav class="flex flex-wrap gap-4 mt-8">
+                <SocialPill href="https://www.linkedin.com/in/diegoandrespizarro/">
+                    <LinkedInIcon class="size-4"/>
+                    LinkedIn
+                </SocialPill>
+                <SocialPill href="diego.pizarro1986@gmail.com">
+                    <MailIcon class="size-4"/>
+                    diego.pizarro1986@gmail.com
+                </SocialPill>
+        </nav>
+    </div>
