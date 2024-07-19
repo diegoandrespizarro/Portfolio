@@ -4,7 +4,9 @@ import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
-
+import Js from "./icons/Js.astro";
+import Css from "./icons/Css.astro";
+import Node from "./icons/Node.astro";
 const TAGS = {
     NEXT: {
         name: "Next.js",
@@ -16,25 +18,51 @@ const TAGS = {
         class: "bg-[#003159] text-white",
         icon: Tailwind,
     },
+    Js: {
+        name: "JavaScript",
+        class: "bg-[#003159] text-white",
+        icon: Js,
+    },
+    Css: {
+        name: "Css",
+        class: "bg-[#003159] text-white",
+        icon: Css,
+    },
+    Node: {
+        name: "Node.js",
+        class: "bg-[#003159] text-white",
+        icon: Node,
+    },
 };
 const PROJECTS = [
     {
-        title: "Enerviento",
+        title: "Gobierno abierto",
         description:
-            "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-        link: "https://enerviento.netlify.app",
-        github: "https://github.com/diegoandrespizarro/Team-Technology",
-        image: "/projects/Enerviento.webp",
-        tags: [TAGS.NEXT, TAGS.TAILWIND],
+            "Plataforma de gobierno abierto. Creada desde cero con next.js, tailwind css.",
+        link: "https://gobierno-abierto.vercel.app/organigrama",
+        image: "/projects/GobiernoAbierto.webp",
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.Node],
     },
     {
         title: "The Music House",
         description:
-            "Ecommerce tienda de musica. Creada desde cero con Js, css.",
+            "Esta aplicación de ecommerce está diseñada para la venta de productos relacionados con la música.Tecnoligias usadas: Html, Css, Js, Bootstrap, APIs.",
         link: "https://themusichouse-95i.netlify.app",
-        image: "/projects/Musichouse.webp",
-        tags: [TAGS.NEXT, TAGS.TAILWIND],
+        github: "https://github.com/diegoandrespizarro/ecommerce_Music.git",
+        image: "/projects/Music.webp",
+        tags: [TAGS.Css, TAGS.Js],
     },
+    {
+        title: "Enerviento",
+        description:
+            "La página institucional de Enerviento está dedicada a la promoción y venta de tecnología aplicada a la energía.Tecnologias usadas: Html, Css, Js, Bootstrap.",
+        link: "https://enerviento.netlify.app",
+        github: "https://github.com/diegoandrespizarro/Team-Technology",
+        image: "/projects/Enerviento.webp",
+        tags: [TAGS.Css, TAGS.Js],
+    },
+    
+    
 ];
 ---
 
