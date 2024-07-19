@@ -39,7 +39,7 @@ const PROJECTS = [
         title: "Gobierno abierto",
         description:
             "Plataforma de gobierno abierto. Creada desde cero con next.js, tailwind css.",
-        link: "https://gobierno-abierto.vercel.app/organigrama",
+        link: "https://gobierno-abierto.vercel.app/",
         image: "/projects/GobiernoAbierto.webp",
         tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.Node],
     },
@@ -104,13 +104,13 @@ const PROJECTS = [
                         </div>
                         <footer class="flex items-end justify-start mt-4 gap-x-4">
                             {github && (
-                                <LinkButton href={github}>
+                                <LinkButton href={github} target="_blank">
                                     <GitHub class="size-6" />
                                     Code
                                 </LinkButton>
                             )}
                             {link && (
-                                <LinkButton href={link}>
+                                <LinkButton href={link} target="_blank">
                                     <Link class="size-4" />
                                     Preview
                                 </LinkButton>
